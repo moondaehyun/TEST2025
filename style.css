@@ -1,0 +1,860 @@
+/* ----- 1. 기본 설정 ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  min-width: 1440px;
+  background-image: url("img/6.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----- 2. 상단 네비게이션 (기존과 동일) ----- */
+.top-nav {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  background-color: rgba(5, 5, 5, 0.5);
+  padding: 20px 130px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.top-nav a {
+  color: #b3a77b;
+  font-weight: 400;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.top-nav a:hover {
+  color: #fff;
+}
+
+/* ----- 3. 메인 콘텐츠 (섹션 1) ----- */
+.collage-section-1 {
+  position: relative;
+  width: 1440px;
+  height: 1700px; /* 기존 1700px 유지 */
+  margin: 10px auto;
+  /* border: 1px dashed red; */
+}
+
+/* ----- 4. 콜라주 내부 요소들 (섹션 1) ----- */
+/* (기존 섹션 1 스타일은 모두 동일합니다) */
+/* ... (코드 생략) ... */
+.main-title {
+  position: absolute;
+  top: 380px;
+  left: 380px;
+  font-size: 160px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  z-index: 15;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.ink-splash {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 1200px;
+  height: 800px;
+  background-image: url("img/ink-splash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 12;
+}
+.intro-text {
+  position: absolute;
+  top: 900px;
+  left: 100px;
+  font-size: 15px;
+  color: #b3a77b;
+  line-height: 1.7;
+  z-index: 20;
+  width: 400px;
+  text-align: left;
+}
+.collage-item {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.collage-item .text-content {
+  position: absolute;
+  color: #b3a77b;
+  font-size: 20px;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  text-align: right;
+}
+#myeongryang {
+  top: 20px;
+  left: 100px;
+  width: 550px;
+  height: 890px;
+  z-index: 5;
+  background-image: url("img/1.png");
+}
+#myeongryang .text-content {
+  top: 15px;
+  right: 20px;
+  width: 400px;
+}
+#gwanghae {
+  top: 20px;
+  right: 55px;
+  width: 700px;
+  height: 500px;
+  z-index: 6;
+  background-image: url("img/2.png");
+}
+#gwanghae .text-content {
+  bottom: 10px;
+  right: 40px;
+}
+#deokhye {
+  top: 540px;
+  right: 70px;
+  width: 660px;
+  height: 300px;
+  z-index: 9;
+  background-image: url("img/3.png");
+}
+#deokhye .text-content {
+  top: 20px;
+  right: 20px;
+  width: 400px;
+  text-align: right;
+}
+#gunhamdo {
+  top: 870px;
+  left: 295px;
+  width: 1250px;
+  height: 350px;
+  z-index: 4;
+  background-image: url("img/4.png");
+}
+#gunhamdo .text-content {
+  top: 305px;
+  right: 200px;
+}
+#newItem {
+  top: 30px;
+  left: -500px;
+  width: 1980px;
+  height: 1360px;
+  z-index: 8;
+  background-image: url("img/5.png");
+}
+#newItem .text-content {
+  bottom: 20px;
+  right: 20px;
+}
+.small-text-1 {
+  position: absolute;
+  top: 800px;
+  left: 150px;
+  font-size: 14px;
+  color: #b3a77b;
+  z-index: 20;
+}
+/* ----- 섹션 1 스타일 끝 ----- */
+
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ 5. 명량 상세 (섹션 2) - 스타일 수정 ★ */
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+.details-section {
+  position: relative;
+  width: 1440px;
+  height: 2500px; /* 섹션 높이 */
+  margin: 10px auto;
+
+  overflow: hidden;
+}
+
+/* 명량 콜라주 아이템 공통 스타일 */
+.myeongryang-collage-item {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#myeongryang-poster-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/myeongryang-poster-main.jpg");
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+#myeongryang-char-left {
+  top: 350px;
+  left: 0px;
+  width: 1050px;
+  height: 1150px;
+  background-image: url("img/10.png");
+  background-size: contain;
+  background-position: left bottom;
+  z-index: 3;
+}
+
+#myeongryang-char-right-top {
+  top: 100px;
+  right: 0px;
+  width: 830px;
+  height: 1130px;
+  background-image: url("img/7.png");
+  background-size: contain;
+  background-position: right top;
+  z-index: 4;
+}
+
+#myeongryang-char-left-top {
+  top: 50px;
+  right: 650px;
+  width: 830px;
+  height: 1130px;
+  background-image: url("img/9.png");
+  background-size: contain;
+  background-position: right top;
+  z-index: 2;
+}
+
+/* ★★★ 먹물 효과 (background-size 수정) ★★★ */
+#myeongryang-ink-splash {
+  top: 1150px;
+  left: -250px;
+  width: 100%; /* (사용자가 수정한 100% 유지) */
+  height: 45%; /* (사용자가 수정한 30% 유지) */
+  background-image: url("img/11.png");
+  background-size: contain; /* ★★★ 수정: cover -> contain (잘림 방지) ★★★ */
+  background-position: center;
+  background-repeat: no-repeat; /* (추가: contain 사용 시 필요) */
+
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* 영화 소개글 (10.png 아래로 이동) */
+.details-text-block {
+  position: absolute;
+  top: 1420px;
+  left: 100px;
+  width: 550px;
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.8;
+  z-index: 10;
+
+  padding: 20px;
+  border-radius: 8px;
+}
+.details-text-block p {
+  margin-bottom: 15px;
+}
+.details-text-block p.highlight {
+  color: #f0c05a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 버튼 */
+.details-button {
+  position: absolute;
+  top: 1480px;
+  right: 100px;
+  z-index: 10;
+  background-color: #1e242e;
+  border: 3px solid #b3a77b;
+  border-radius: 8px;
+  padding: 30px 64px;
+  color: #f0f0f0;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+.details-button:hover {
+  background-color: #b3a77b;
+  color: #2b2b2b;
+  border-color: #f0c05a;
+}
+.details-button img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+}
+.details-button:hover img {
+  filter: invert(0);
+}
+
+/* 포스터 텍스트 */
+.myeongryang-poster-text {
+  position: absolute;
+  bottom: 100px;
+  right: 150px;
+  color: #fff;
+  text-align: right;
+  z-index: 10;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.myeongryang-poster-text .poster-title {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #f0c05a;
+}
+.myeongryang-poster-text .poster-tagline {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.myeongryang-poster-text .poster-release {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ 6. 테이프 이미지 (새로 추가됨) ★ */
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+.tape-image {
+  position: absolute;
+  width: 500px; /* (테이프 크기 조절) */
+  height: auto; /* (비율 유지) */
+  z-index: 11; /* (텍스트(10)보다 위에) */
+}
+
+/* (아래 top/left/transform 값은 예시입니다. 원하는 위치로 조절하세요!) */
+#tape-1 {
+  top: 30px; /* 텍스트 블록 위쪽 근처 */
+  left: 400px;
+}
+
+#tape-2 {
+  top: 1050px;
+  left: 900px; /* 텍스트 블록 오른쪽 위 근처 */
+}
+
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ 7. 덕혜옹주 상세 (섹션 3) 스타일 ★ */
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+
+/* 섹션 3의 기본 높이 및 배경색 조정 */
+#deokhye-details {
+  height: 2200px; /* ★★★ 섹션 높이 조절 (스크린샷 기준 추정) ★★★ */
+}
+
+/* 섹션 3의 각 이미지 요소들 경로 및 스타일 지정 */
+/* (기존 .details-클래스 스타일을 일부 덮어씁니다) */
+
+#deokhye-details .details-poster-bg {
+  background-image: url("img/deokhye-bg.jpg"); /* ★★★ 덕혜 배경 이미지 ★★★ */
+  filter: brightness(0.6); /* 밝기 조절 */
+  background-position: center top;
+}
+
+#deokhye-details .details-char-left {
+  top: 50px;
+  left: 0px;
+  width: 1200px;
+  height: 1300px;
+  background-image: url("img/d2.png"); /* ★★★ 왼쪽 큰 인물 이미지 ★★★ */
+  background-size: contain;
+  background-position: left center;
+  z-index: 3;
+}
+
+/* 중앙 인물 이미지 (스크린샷 참고) */
+#deokhye-details .details-char-center {
+  /* HTML에도 이 클래스를 가진 div가 필요합니다! */
+  top: 150px;
+  right: 250px;
+  width: 600px;
+  height: 800px;
+  background-image: url("img/d1.png"); /* ★★★ 중앙 인물 이미지 ★★★ */
+  background-size: contain;
+  background-position: center;
+  z-index: 5;
+  transform: rotate(5deg); /* 살짝 기울임 */
+}
+
+/* 하단 인물 이미지 (스크린샷 참고) */
+#deokhye-details .details-char-bottom {
+  /* HTML에도 이 클래스를 가진 div가 필요합니다! */
+  top: 650px;
+  left: 100px;
+  width: 1300px;
+  height: 1000px;
+  background-image: url("img/d3.png"); /* ★★★ 하단 인물 이미지 ★★★ */
+  background-size: contain;
+  background-position: center bottom;
+  z-index: 4;
+  transform: rotate(-3deg);
+}
+
+/* 먹물/찢어진 효과 */
+#deokhye-details .details-ink-splash {
+  top: 900px;
+  left: 300px;
+  width: 100%;
+  height: 45%;
+  background-image: url("img/d4.png"); /* ★★★ 덕혜 먹물/효과 이미지 ★★★ */
+  background-size: contain;
+
+  z-index: 6; /* 텍스트(10)보다 아래 */
+  pointer-events: none;
+}
+
+/* 영화 소개글 위치 조정 */
+#deokhye-details .details-text-block {
+  top: 1200px;
+
+  left: 800px;
+  width: 600px; /* 너비 조정 */
+  background-color: rgba(10, 10, 10, 0.6); /* 배경 더 어둡게 */
+  text-align: left; /* 왼쪽 정렬 */
+  padding: 20px;
+  border-radius: 8px;
+}
+/* 덕혜옹주 텍스트 왼쪽정렬 */
+#deokhye-details .details-text-block p {
+  text-align: left;
+}
+#deokhye-details .details-text-block p.highlight {
+  /* 하이라이트 스타일은 그대로 사용 */
+}
+
+/* 버튼 (덕혜) ★★★ 위치/크기 유지 + 호버 수정 ★★★ */
+#deokhye-details .details-button {
+  top: 1550px; /* ★★★ 사용자 지정 위치 유지 ★★★ */
+  right: 900px; /* ★★★ 사용자 지정 위치 유지 ★★★ */
+  z-index: 20;
+  background-color: #1e242e; /* ★★★ 사용자 지정 색상 유지 ★★★ */
+  border: 3px solid #b3a77b;
+  border-radius: 8px;
+  padding: 30px 64px; /* ★★★ 사용자 지정 크기 유지 ★★★ */
+  color: #f0f0f0;
+  font-size: 30px; /* ★★★ 사용자 지정 크기 유지 ★★★ */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+/* ★★★ 수정 완료: 올바른 호버 선택자 ★★★ */
+#deokhye-details .details-button:hover {
+  background-color: #b3a77b;
+  color: #2b2b2b;
+  border-color: #f0c05a;
+}
+
+#deokhye-details .details-button img {
+  width: 40px; /* ★★★ 사용자 지정 크기 유지 ★★★ */
+  height: 40px; /* ★★★ 사용자 지정 크기 유지 ★★★ */
+  filter: invert(1);
+}
+
+/* ★★★ 수정 완료: 올바른 이미지 호버 선택자 ★★★ */
+#deokhye-details .details-button:hover img {
+  filter: invert(0);
+}
+
+/* 테이프 이미지 위치 조정 */
+/* (새로운 tape 이미지 경로 사용) */
+#deokhye-details .tape-1 {
+  top: -20px;
+  left: 650px;
+  width: 650px; /* 테이프 크기 조정 */
+}
+
+#deokhye-details .tape-2 {
+  top: 1250px;
+  right: 750px; /* 오른쪽 기준으로 변경 */
+  left: auto; /* 기존 left 제거 */
+  width: 650px;
+}
+
+/* (포스터 텍스트 스타일은 이 섹션에 필요 없으므로 생략) */
+
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ 8. 광해 상세 (섹션 4) 스타일 ★ */
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+
+/* 섹션 4의 기본 높이 및 배경색 조정 */
+#gwanghae-details {
+  height: 2200px; /* ★★★ 섹션 높이 조절 (스크린샷 기준 추정) ★★★ */
+}
+
+/* 섹션 4의 각 이미지 요소들 경로 및 스타일 지정 */
+#gwanghae-details .details-poster-bg {
+  background-image: url("img/gwanghae-bg.jpg"); /* ★★★ 광해 배경 이미지 ★★★ */
+  filter: brightness(0.6);
+  background-position: center center;
+}
+
+#gwanghae-details .details-char-left {
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  height: 900px;
+  background-image: url("img/g1.png"); /* ★★★ 왼쪽 큰 인물 ★★★ */
+  background-size: contain;
+  background-position: left center;
+  z-index: 3;
+}
+
+/* 오른쪽 위 포스터 (새 클래스 추가 필요) */
+#gwanghae-details .details-poster {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* 공통 속성 */
+  top: 80px;
+  right: 150px;
+  width: 550px;
+  height: 750px;
+  background-image: url("img/g2.png"); /* ★★★ 오른쪽 위 포스터 ★★★ */
+  background-size: contain;
+  z-index: 6;
+}
+
+/* 오른쪽 아래 장면 (새 클래스 추가 필요) */
+#gwanghae-details .details-scene {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* 공통 속성 */
+  top: 580px;
+  right: 140px;
+  width: 1180px;
+  height: 880px;
+  background-image: url("img/g3.png"); /* ★★★ 오른쪽 아래 장면 ★★★ */
+  background-size: cover;
+  z-index: 5; /* 포스터(4)보다 위에 */
+  transform: rotate(-5deg); /* 반대 기울임 */
+}
+
+/* 먹물 */
+#gwanghae-details .details-ink-splash {
+  background-image: url("img/g4.png"); /* ★★★ 광해 먹물 효과 ★★★ */
+  top: 1150px; /* 위치 조정 */
+  left: -100px;
+  width: 1300px; /* 크기 조정 */
+  height: 1000px;
+
+  z-index: 8; /* 텍스트(10)보다 아래 */
+}
+
+/* 영화 소개글 위치 조정 */
+#gwanghae-details .details-text-block {
+  top: 1400px; /* 위치 조정 */
+  left: 100px;
+  width: 550px;
+  background-color: transparent; /* 배경 투명하게 */
+  padding: 0; /* 패딩 제거 */
+  text-align: left; /* 왼쪽 정렬 */
+  z-index: 10;
+}
+#gwanghae-details .details-text-block p {
+  text-align: left;
+  margin-bottom: 18px; /* 간격 조정 */
+  color: #d0d0d0; /* 글씨색 조정 */
+  font-size: 15px; /* 글씨 크기 조정 */
+  line-height: 1.7;
+}
+#gwanghae-details .details-text-block p.highlight {
+  color: #b3a77b; /* 하이라이트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 버튼 위치 조정 */
+/* 버튼 위치 조정 (광해) */
+#gwanghae-details .details-button {
+  top: 1350px; /* 위치 조정 */
+  right: 100px;
+  z-index: 10;
+  background-color: #1e242e;
+  border: 3px solid #b3a77b;
+  border-radius: 8px;
+  padding: 30px 64px;
+  color: #f0f0f0;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+#gwanghae-details .details-button:hover {
+  background-color: #b3a77b;
+  color: #2b2b2b;
+  border-color: #f0c05a;
+}
+/* (호버 스타일은 공통 .details-button:hover 사용) */
+
+#gwanghae-details .details-button img {
+  width: 40px; /* 아이콘 크기 조정 */
+  height: 40px;
+  filter: invert(1); /* (추가: 기본 아이콘 흰색) */
+}
+#gwanghae-details .details-button:hover img {
+  filter: invert(0);
+}
+
+/* (이미지 호버 스타일은 공통 .details-button:hover img 사용) */
+/* 테이프 이미지 위치 조정 */
+#gwanghae-details .tape-1 {
+  top: -50px;
+  right: 100px; /* 오른쪽 기준 */
+  left: auto; /* 왼쪽 기준 제거 */
+  width: 600px; /* 크기 조정 */
+
+  z-index: 7; /* 장면(5)보다 위에 */
+}
+
+#gwanghae-details .tape-2 {
+  top: 1100px;
+  right: 700px;
+  left: auto;
+  width: 700px;
+
+  z-index: 7;
+}
+
+/* (포스터 텍스트 스타일은 이 섹션에 필요 없으므로 생략) */
+
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ 9. 군함도 상세 (섹션 5) 스타일 ★ */
+/* ★★★★★★★★★★★★★★★★★★★★★★ */
+
+/* 섹션 5의 기본 높이 및 배경색 조정 */
+#gunhamdo-details {
+  height: 2300px; /* ★★★ 섹션 높이 조절 (스크린샷 기준 추정) ★★★ */
+}
+
+/* 섹션 5의 각 이미지 요소들 경로 및 스타일 지정 */
+#gunhamdo-details .details-poster-bg {
+  background-image: url("img/gunhamdo-bg.jpg"); /* ★★★ 군함도 배경 이미지 ★★★ */
+  filter: brightness(0.5);
+  background-position: center center; /* 배경 위치 조정 */
+}
+
+/* 왼쪽 위 장면 이미지 (클래스 재활용) */
+#gunhamdo-details .details-char-left {
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  height: 900px;
+  background-image: url("img/gg1.png"); /* ★★★ 왼쪽 큰 인물 ★★★ */
+  background-size: contain;
+  background-position: left center;
+  z-index: 3;
+}
+
+/* 중앙 메인 포스터 (클래스 재활용) */
+#gunhamdo-details .details-char-center {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* 공통 속성 */
+  top: 80px;
+  right: 150px;
+  width: 750px;
+  height: 950px;
+  background-image: url("img/gg2.png"); /* ★★★ 오른쪽 위 포스터 ★★★ */
+  background-size: contain;
+  z-index: 6;
+}
+
+/* 왼쪽 아래 장면 이미지 (클래스 재활용) */
+#gunhamdo-details .details-char-bottom {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* 공통 속성 */
+  top: 780px;
+  right: 140px;
+  width: 1180px;
+  height: 880px;
+  background-image: url("img/gg3.png"); /* ★★★ 오른쪽 아래 장면 ★★★ */
+  background-size: cover;
+  z-index: 5; /* 포스터(4)보다 위에 */
+  transform: rotate(-5deg); /* 반대 기울임 */
+}
+
+/* 먹물/찢어진 효과 (클래스 재활용) */
+#gunhamdo-details .details-ink-splash {
+  background-image: url("img/gg4.png"); /* ★★★ 광해 먹물 효과 ★★★ */
+  top: 1150px; /* 위치 조정 */
+  left: 300px;
+  width: 1300px; /* 크기 조정 */
+  height: 1000px;
+
+  z-index: 8; /* 텍스트(10)보다 아래 */
+}
+
+/* 영화 소개글 위치 조정 */
+#gunhamdo-details .details-text-block {
+  top: 1450px; /* 위치 조정 */
+  right: 150px; /* 오른쪽 배치 */
+  left: auto; /* 왼쪽 기준 제거 */
+  width: 500px;
+  background-color: transparent; /* 배경 없음 */
+  padding: 0;
+  text-align: left; /* 왼쪽 정렬 */
+  z-index: 10;
+}
+#gunhamdo-details .details-text-block p {
+  text-align: left;
+  margin-bottom: 16px;
+  color: #c0c0c0; /* 글씨색 조정 */
+  font-size: 15px;
+}
+#gunhamdo-details .details-text-block p.highlight {
+  color: #b3a77b; /* 하이라이트 색 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 버튼 위치 조정 */
+#gunhamdo-details .details-button {
+  top: 1850px; /* 위치 조정 */
+  right: 800px;
+  z-index: 10;
+  background-color: #1e242e;
+  border: 3px solid #b3a77b;
+  border-radius: 8px;
+  padding: 30px 64px;
+  color: #f0f0f0;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+#gunhamdo-details .details-button:hover {
+  background-color: #b3a77b;
+  color: #2b2b2b;
+  border-color: #f0c05a;
+}
+/* (호버 스타일은 공통 .details-button:hover 사용) */
+
+#gunhamdo-details .details-button img {
+  width: 40px; /* 아이콘 크기 조정 */
+  height: 40px;
+  filter: invert(1); /* (추가: 기본 아이콘 흰색) */
+}
+#gunhamdo-details .details-button:hover img {
+  filter: invert(0);
+}
+
+/* 테이프 이미지 위치 조정 */
+#gunhamdo-details .tape-1 {
+  top: -0px;
+  right: 300px; /* 오른쪽 기준 */
+  left: auto; /* 왼쪽 기준 제거 */
+  width: 550px; /* 크기 조정 */
+  z-index: 7; /* 포스터(5)보다 위에 */
+}
+
+#gunhamdo-details .tape-2 {
+  top: 1400px;
+  right: 1000px; /* 오른쪽 기준 */
+  left: auto;
+  width: 480px; /* 크기 조정 */
+  transform: rotate(12deg);
+  z-index: 7;
+}
+
+/* (포스터 텍스트 스타일은 이 섹션에 필요 없으므로 생략) */
+/* ----- 9. 이미지 모달 팝업 스타일 ----- */
+.modal {
+  /* 기본적으로 숨김 상태 */
+  display: none;
+  position: fixed;
+  z-index: 2000; /* 네비게이션(1000) 및 모든 요소 위에 위치 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* 배경을 어둡게 처리하여 모달에 집중 */
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px; /* 이미지가 상단에 너무 붙지 않게 여백 추가 */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px; /* 이미지 최대 크기 제한 */
+  height: auto;
+  /* 이미지 나타날 때 애니메이션 (선택 사항) */
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+/* 닫기 버튼 스타일 */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 이미지 나타날 때 애니메이션 키프레임 (선택 사항) */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
